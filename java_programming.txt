@@ -1,0 +1,183 @@
+package Homework_1;
+
+import java.util.Scanner;
+
+public class Keybaord {
+
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		Scanner myObj = new Scanner(System.in);
+		String keybaords;
+		System.out.println("Enter a or A to display 10 entities per page");
+		System.out.println("Enter b or B to display 20 entities per page");
+		System.out.println("Enter c or C to display 50 entities per page");
+		System.out.println("Enter d or D to display 100 entities per page");
+		System.out.println("Enter e or E to display 200 entities per page");
+		System.out.println("----------------------------------------------");
+		System.out.println("Enter:");
+		keybaords = myObj.nextLine(); 
+		int a = 10;
+		int b = 20;
+		int c = 50;
+		int d = 100;
+		int e =200;
+		int defaults =5;
+		
+	    switch (keybaords) {
+	        case "a":
+	        case "A":
+	            System.out.println("Entities:150");
+	            System.out.println("Entities To Display Per Page:"+a);
+	            System.out.println("========================================");
+	           for(int j = 1;j<=150/a;j++) {
+	        	   System.out.print("|"+"page"+j+":"+a);
+	           }
+	           System.out.println("|");
+	            break;
+	        case "b":
+	        case "B":
+	        	 System.out.println("Entities:150");
+		            System.out.println("Entities To Display Per Page:"+b);
+		            System.out.println("========================================");
+		           for(int sd = 1;sd <= 150 / b; sd++) {
+		        	   if(sd < 150/b) {
+		        		   System.out.print(" " + "|" + "page" + sd + ":" +b);
+		        	   }else {
+		        		   System.out.print(" " + "|" + "page" + sd + ":" + b + "|" + "page8:"+a);
+		        	   }
+		           }
+		           System.out.println("|");
+		            break;
+	        case "c":
+	        case "C":
+	        	 System.out.println("Entities:150");
+		            System.out.println("Entities To Display Per Page:"+c);
+		            System.out.println("========================================");
+		           for(int st = 1;st<=150/c;st++) {
+		        	   System.out.print("|"+"page"+st+":"+c);
+		           }
+		           System.out.println(" " + "|");
+		            break;
+	        case "d":
+	        case "D":
+	        	 System.out.println("Entities:150");
+		         System.out.println("Entities To Display Per Page:" + d);
+		         System.out.println("========================================");
+		           for(int sd = 1;sd <= 150 / d; sd++) {
+		        	   if(sd <150/d) {
+		        		   System.out.print("|"+"page"+ sd +":"+d);
+		        	 
+		        	   }else {
+		        		   System.out.print(" " + "|" + "page"+ sd + ":" + d + "|" + "page2:" +c);
+		        	   }
+		           }
+		           System.out.println("|");
+		            break;
+	        case "e":
+	        case "E":
+	        	 System.out.println("Entities:150");
+		            System.out.println(" " + "Entities To Display Per Page:" + e);
+		            System.out.println("========================================");
+		            if(e>150/e) {
+		            	System.out.print(" " + "|" + "page1:" + (c + d));
+		            }
+		            System.out.println("|");
+		            break;
+	        default:
+	        	 for(int st = 1; st <= 150 / defaults; st++) {
+		        	   System.out.print(" " + "|"+"page"+ st +":"+defaults);
+		           }
+		           System.out.println("|");
+	            break;
+	    }
+	}
+}
+
+
+////////////////////////////////////////////
+
+package Homework_1;
+
+public class Average {
+
+	public static void main(String[] args) {
+		int i = 1;
+		int average = 0;
+		int count = 0;
+		do {
+			if (i % 2 == 1) {
+				average = average +i;
+				count++;
+			}
+			i++;
+		}while(i <= 50);
+		System.out.println("The average of odd number:" +average/count);
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////
+
+package Homework_1;
+
+public class Factorial {
+	public static void main(String[] args) {
+		int i,fact=1;  
+		  int number=5; 
+		  for(i = 1; i <= number; i++){    
+		      fact = fact * i;    
+		  }    
+		  System.out.println(" Factorial of "+ number +" is: " + fact);    
+	}
+}
+
+////////////////////////////////////////////////////////////////////////
+
+package Homework_1;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		char letter = 'a';
+		String letterDescription;
+		switch(letter) {
+		case 'a':
+		case 'A':
+			 letterDescription= "You order BayChha.";
+			break;
+		case 'b':
+		case 'B':
+			 letterDescription="Yuo order Ice Tea.";
+			 break;
+		case 'c':
+		case 'C':
+			letterDescription="You order Soup.";
+			 break;
+		default:
+			letterDescription="Out of order...";
+			break;
+		}
+		System.out.println(letterDescription);
+	}
+
+}
+
+
+/////////////////////////////////////////////////
+
+package Homework_1;
+
+public class Whileloop {
+
+	public static void main(String[] args) {
+		int i= 1;
+		int sum = 0;
+		while(i <= 50) {
+			if(i % 2 == 0) {
+				sum = sum+ i;
+			}
+			i++;
+		}
+		System.out.println("Sum of even number: " + sum);
+	}
+}
